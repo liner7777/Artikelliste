@@ -96,9 +96,7 @@ function artikelerstellen() {
     let beschreibung = document.getElementById("beschreibung").value;
     let preis = document.getElementById("preis").value;
     let anzahl = document.getElementById("anzahl").value;
-    if (check_for_empty()) {
-        // Wenn die Felder leer sind, tue nichts
-    } else {
+    if (!check_for_empty()) {
         if (check_for_duplicate_artikelID(nummer) == true) {
             z_A() // Zeige eine Warnung, wenn die Artikel-ID bereits existiert
         } else {
@@ -237,16 +235,13 @@ function register() {
     } else if (email != emailw) {
         alert("E-Mail Adressen stimmen nicht überein")
     } else {
-        if (check_for_duplicate_username(benutzername2) || check_for_duplicate_email(email)) {
-            // Wenn der Benutzername oder die E-Mail bereits existieren, tue nichts
-        } else {
+        if (!(check_for_duplicate_username(benutzername2) || check_for_duplicate_email(email))) {
             var rolle = Rollen_Gruppe.getRolleByName("Nutzer") // Hole die Rolle "Nutzer"
             var nutzer = new Nutzer(vname, nname, benutzername2, email, passwort2, geb, rolle, true)
             Nutzer_Gruppe.addNutzer(nutzer) // Füge den neuen Nutzer hinzu
-            document.getElementById("anmeldungg").click() // Klicke auf den Anmeldebutton
+            document.getElementById("anmeldungg").click() // Klicke auf den Anmeldebutton}
         }
     }
-}
 
 // Funktion zum Weiterleiten zur Admin-Seite
 function to_admin() {
