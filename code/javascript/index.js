@@ -239,9 +239,10 @@ function register() {
             var rolle = Rollen_Gruppe.getRolleByName("Nutzer") // Hole die Rolle "Nutzer"
             var nutzer = new Nutzer(vname, nname, benutzername2, email, passwort2, geb, rolle, true)
             Nutzer_Gruppe.addNutzer(nutzer) // Füge den neuen Nutzer hinzu
-            document.getElementById("anmeldungg").click() // Klicke auf den Anmeldebutton}
+            document.getElementById("anmeldungg").click() // Klicke auf den Anmeldebutton
         }
     }
+}
 
 // Funktion zum Weiterleiten zur Admin-Seite
 function to_admin() {
