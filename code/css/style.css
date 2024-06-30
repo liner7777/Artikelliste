@@ -320,7 +320,7 @@ select{
     border-style: none;
 }
 .table-wrapper {
-    max-height: 550px; /* set the desired max height */
+    max-height: 550px; /* Setze die gewollte maximale Höhe */
     overflow-y: auto;
     margin-top: 20px;
     width:max-content;
@@ -333,29 +333,27 @@ select{
     max-width: 430px;
     min-width: 430px;
 }
-/* Styling the scrollbar for WebKit-based browsers */
 .table-wrapper::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-    height: 12px; /* Height of the scrollbar */
+    width: 12px; /* Breite der Scrollbar */
+    height: 12px; /* Höhe der Scrollbar */
 }
 
 .table-wrapper::-webkit-scrollbar-track {
-    background: #1a1a1a; /* Background of the scrollbar track */
-    border-radius: 20px; /* Rounding the track corners */
+    background: #1a1a1a; /* Hintergrundfarbe der Scrollbar-Leiste */
+    border-radius: 20px; /* Ecken der Leiste abrunden */
 }
 
 .table-wrapper::-webkit-scrollbar-thumb {
-    background-color: #4d4d4d; /* Color of the scrollbar thumb */
-    border-radius: 20px; /* Rounding the thumb corners */
-    border: 2px solid #1a1a1a; /* Adding a border around the thumb */
+    background-color: #4d4d4d; /* Farbe des Scrollbar Thumbs */
+    border-radius: 20px; /* Thumb-Ecken abrunden */
+    border: 2px solid #1a1a1a; /* Rand beim Thumb hinzufügen */
 }
 
 .table-wrapper::-webkit-scrollbar-thumb:hover {
-    background-color: #666666; /* Color of the scrollbar thumb on hover */
+    background-color: #666666; /* Farbe des Scrollbar Thumbs beim Hovern */
 }
 
-/* Styling the scrollbar for Firefox */
 .table-wrapper {
-    scrollbar-width: thin; /* Width of the scrollbar */
-    scrollbar-color: #4d4d4d #1a1a1a; /* Color of the thumb and track */
+    scrollbar-width: thin; /* Breite der Scrollbar */
+    scrollbar-color: #4d4d4d #1a1a1a; /* Farbe von Thumb und Leiste */
 }
