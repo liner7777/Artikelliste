@@ -114,9 +114,7 @@ function artikelbearbeiten() {
     let beschreibung = document.getElementById("beschreibung2").value;
     let preis = document.getElementById("preis2").value;
     let anzahl = document.getElementById("anzahl2").value;
-    if (check_for_empty2()) {
-        // Wenn die Felder leer sind, tue nichts
-    } else {
+    if (!check_for_empty2()) {
         let art = Artikel_Gruppe.getArtikelByNr(nummer) // Hole den Artikel basierend auf der Nummer
         let man = new ArtikelManager(art) // Erstelle einen ArtikelManager für den Artikel
         man.setName(name) // Setze den neuen Namen
