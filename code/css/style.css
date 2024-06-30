@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+ 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    background: linear-gradient(to right, #1a1a1a, #333333);
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+.flex{
+    display: flex;
+  
+ 
+}
+details{
+    margin-left: 10px ;
+    margin-right: 10px;
+}
+.right{
+    display: flex;
+    margin-left: 50px;
+}
+/* Stil für den Schalter */
+.switch-label {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px; /* Runde die Ecken ab */
+    cursor: pointer;
+  }
+ 
+  /* Stil für den Schieberegler */
+  .slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%; /* Kreisförmiger Punkt */
+    transition: transform 0.2s ease; /* Füge eine sanfte Animation hinzu */
+  }
+ 
+  /* Ändere den Punkt, wenn der Schalter aktiviert ist */
+  .switch-checkbox:checked + .slider{
+    transform: translateX(20px); /* Verschiebe den Punkt nach rechts */
+    background-color: #1a1a1a;
+   
+  }
+ 
+ 
+nav {
+    display: flex;
+    justify-content: flex-end;
+   width: 98%;
+}
+ 
+ul {
+    display: flex;
+    justify-content: flex-end;
+}
+ 
+.container, .container2, .art {
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: min-content;
+}
+ 
+.container {
+    width: 500px;
+    margin-top: 90px;
+}
+ 
+.container2 {
+    width: auto;
+    margin-top: 20px;
+    transition: ease-in-out 0.3s;
+   
+}
+ 
+.art {
+    width: 500px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    z-index: 10;
+}
+ 
+h2 {
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+ 
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+ 
+.form-row .input-wrapper {
+    width: 48%;
+    position: relative;
+}
+ 
+.input-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+ 
+input {
+    width: calc(100% - 75px);
+    padding: 15px;
+    padding-right: 60px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ 
+input:focus {
+    outline: none;
+}
+ 
+input::placeholder {
+    color: #999999;
+}
+ 
+input:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+ 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+.info-icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+ 
+.info {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    top: -50%;
+    left: 48%;
+    transform: translateY(-50%);
+    width: 200px;
+    z-index: 1;
+}
+ 
+.info-icon:hover + .info {
+    display: block;
+}
+ 
+button {
+    padding: 15px;
+    font-size: 16px;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ 
+button:hover {
+    background-color: #666666;
+}
+ 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+ 
+.link {
+    margin-top: 20px;
+    text-align: center;
+}
+ 
+.link a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+ 
+.link a:hover {
+    color: #ffffff;
+}
+ 
+.suchleiste {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+/* Table */
+table {
+    border-collapse: collapse;
+}
+ 
+th,
+td {
+    border-bottom: 1px solid #333333;
+    padding: 8px;
+    text-align: left;
+    font-size: large;
+    max-width: 150px;
+    min-width: 150px;
+}
+ 
+
+th {
+    background-color: #4d4d4d;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+ 
+.tanummer {
+    width: 150px;
+    max-width: 150px;
+}
+ 
+.tname {
+    width: 350px;
+    max-width: 350px;
+}
+ 
+.tpreis {
+    width: 150px;
+    max-width: 150px;
+}
+ 
+.taktion {
+    width: 100px;
+    max-width: 100px;
+}
+ 
+.breit {
+    border-bottom: 1px solid #333333;
+    padding: 8px;
+    text-align: left;
+    font-size: auto;
+    max-width: 400px;
+    min-width: 400px;
+}
+ 
+.abs {
+    margin-left: 10px;
+}
+.ba{
+    margin: 5px;
+}
+.tabelAnfrage {
+    width: 100%;
+}
+select{
+    background-color:#4d4d4d ;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    font-size: 16px;
+    border-radius: 5px;
+    border-style: none;
+}
+.table-wrapper {
+    max-height: 550px; /* set the desired max height */
+    overflow-y: auto;
+    margin-top: 20px;
+    width:max-content;
+}
+.w{
+    max-width: 500px;
+    min-width: 500px;
+}
+.w2{
+    max-width: 430px;
+    min-width: 430px;
+}
+/* Styling the scrollbar for WebKit-based browsers */
+.table-wrapper::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar */
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Background of the scrollbar track */
+    border-radius: 20px; /* Rounding the track corners */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #4d4d4d; /* Color of the scrollbar thumb */
+    border-radius: 20px; /* Rounding the thumb corners */
+    border: 2px solid #1a1a1a; /* Adding a border around the thumb */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #666666; /* Color of the scrollbar thumb on hover */
+}
+
+/* Styling the scrollbar for Firefox */
+.table-wrapper {
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: #4d4d4d #1a1a1a; /* Color of the thumb and track */
+}
