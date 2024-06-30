@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/index.js"></script>
+    <script src="../javascript/admin.js"></script>
+</head>
+ 
+<body onload="checkangemeldetundadmin();">
+ 
+    <nav>
+        <ul>
+            <button onclick="ZZ()" id="zurückknopf" class="ba">Zur&uuml;ck</button>      
+            <button onclick="lO()" class="ba" id="logoutt">Ausloggen</button>
+        </ul>
+    </nav>
+<div class="flex">
+    <details class="container2 w2">
+ 
+         
+        <summary> Ausklappen <h2>Rollen erstellung</h2> </summary>
+        <br>
+        <form >
+          <input type="text" placeholder="Name der Rolle" id="role_name">
+          <br>
+          <label class="switch-label"><div class="right">Bearbeiten_und_L&ouml;schen</div>
+              <input type="checkbox" id="toggleEdit" class="switch-checkbox" />
+              <span id="editslider" class="slider"></span>
+            </label>
+           
+            <br>
+            <label class="switch-label"><div class="right">Adminrechte</div>
+              <input type="checkbox" id="toggleAdmin" class="switch-checkbox" />
+              <span class="slider"></span>
+            </label>
+           
+            <br>
+           
+     
+         
+          <button type="button" onclick="create_rolle();">Rolle erstellen</button>
+       
+         </form>
+      </details>
+
+
+      <div class="container2 ">
+        <h2>Bereits registrierte Nutzer:</h2>
+        <input type="text" id="searchBar" placeholder="Suchen..." oninput="search()">
+        <div class="table-wrapper">
+            <table id="nutzerTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Vorname</th>
+                        <th>Nachname</th>
+                        <th>Rechte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+      <details class="container2 w">
+          <summary> Ausklappen <h2>Registrierungsanfragen:</h2></summary>
+          <br>
+         <div class="table-wrapper">
+            <table id="anfrageTable" class="tabelAnfrage">
+                <thead>
+                   <tr>
+                       <th class="aname">Name des neuen Nutzers</th>
+                       <th class="anfrage">Anfrage Annehmen</th>
+                       <th class="loeschen">Anfrage L&ouml;schen</th>
+                   </tr>
+                </thead>
+             </table>
+         </div>
+      </details>
+</div>
+ 
+
+
+</body>
+ 
+</html>
