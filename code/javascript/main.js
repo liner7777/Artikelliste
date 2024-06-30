@@ -506,9 +506,7 @@ var admin = new Rolle("Admin", true, true, 1);
 var angestellter = new Rolle("Angestellter", false, true, 2);
 var nutzer = new Rolle("Nutzer", false, false, 3);
 
-if (Rollen_Gruppe.getRollen().length > 1) {
-    // Wenn bereits Rollen vorhanden sind, nichts tun
-} else {
+if (!(Rollen_Gruppe.getRollen().length > 1)) {
     Rollen_Gruppe.addRolle(admin);
     Rollen_Gruppe.addRolle(angestellter);
     Rollen_Gruppe.addRolle(nutzer);
