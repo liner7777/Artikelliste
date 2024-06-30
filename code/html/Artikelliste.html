@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../javascript/main.js"></script>
+<html>
+ 
+<head>
+</head>
+ 
+<body onload="checkangemeldetartikelliste(); ist_admin(); search(); checkAndHideArtikel();">
+ 
+ 
+ 
+ 
+    <nav>
+        <ul>
+ 
+            <button onclick="to_admin()" id="adminknopf" class="ba" style="display: none;">Admin</button>
+            <button onclick="lO()" class="ba" id="logoutt">Ausloggen</button>
+        </ul>
+ 
+    </nav>
+    <div class="container2">
+        <h2>Artikelliste</h2>
+        <div class="suchleiste">
+            <input type="text" placeholder="Suchleiste" id="searchBar" oninput="search()">
+            <button class="abs" id="addartikel" onclick="z_A()">Artikel hinzufügen </button>
+ 
+        </div>
+ 
+    <div class="table-wrapper">
+        <table id="artikeltabelle">
+            <tr>
+                <th class="tanummer">Artikel-Nr.</th>
+                <th class="breit">Name</th>
+                <th>Preis in €</th>
+                <th class="aktion" id="aktionheader">Aktion</th>
+                <th id="air"></th>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <div class="art" id="art">
+        <h2>Artikeleingabe</h2>
+        <form>
+ 
+            <br><input type="number" id="artikelNr" placeholder="Artikel-Nummer" required>
+            <br><input type="text" id="name" placeholder="Name" required>
+            <br><input type="text" id="beschreibung" placeholder="Beschreibung" required>
+            <br><input type="text" id="preis" pattern="\d+(.\d{1,2})?" placeholder="Preis in Euro" required>
+            <br><input type="number" id="anzahl" placeholder="Verf&uuml;gbare Anzahl in Lager" required><br>
+            <button onclick="artikelerstellen(); search()">Artikel erstellen</button>
+ 
+            <button onclick="sEingabe()">Zurück</button>
+ 
+        </form>
+    </div>
+    <div class="art" id="aba">
+        <h2>Artikelbearbeitung</h2>
+        <form>
+ 
+            <br><input type="number" id="artikelNr2" placeholder="Artikel-Nummer" required disabled>
+            <br><input type="text" id="name2" placeholder="Name" required>
+            <br><input type="text" id="beschreibung2" placeholder="Beschreibung" required>
+            <br><input type="text" id="preis2" pattern="\d+(.\d{1,2})?" placeholder="Preis in Euro">
+            <br><input type="number" id="anzahl2" placeholder="Verf&uuml;gbare Anzahl in Lager" required><br>
+            <button onclick="artikelbearbeiten(); search()">Artikel bearbeiten</button>
+ 
+            <button onclick="sbEingabe()">Zurück</button>
+ 
+        </form>
+    </div>
+    <script src="../javascript/artikelliste.js"></script>
+    <script src="../javascript/index.js"></script>
+</body>
+ 
+</html>

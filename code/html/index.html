@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung und Registrierung</title>
+<link rel="stylesheet" href="../css/style.css">
+<script src="../javascript/main.js"></script>
+<script src="../javascript/index.js"></script>
+</head>
+<body onload="checkangemeldet()">
+    <div class="container" id="anmeldung">
+        <h2>Anmeldung</h2>
+        <form>
+            <div class="input-wrapper">
+                <input type="text" id="benutzername1"placeholder="Benutzername" required>
+                <div class="info-icon">i</div>
+                <div class="info">Bitte geben Sie Ihren Benutzernamen ein.</div>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" id="passwort1" placeholder="Passwort" required>
+                <div class="info-icon">i</div>
+                <div class="info">Bitte geben Sie Ihr Passwort ein.</div>
+            </div>
+            <button onclick="anmelden()" type="button">Anmelden</button>
+        </form>
+        <div class="link">
+            <a href="#registrierung" onclick="showRegistrierung()">Noch keinen Account? Registrieren</a>
+        </div>
+    </div>
+ 
+    <div class="container" id="registrierung" style="display: none;">
+        <h2>Registrierung</h2>
+        <form>
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input type="text" id="vname" placeholder="Vorname" required>
+                    <div class="info-icon">i</div>
+                    <div class="info">Bitte geben Sie Ihren Vornamen ein.</div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="nname" placeholder="Nachname" required>
+                    <div class="info-icon">i</div>
+                    <div class="info">Bitte geben Sie Ihren Nachnamen ein.</div>
+                </div>
+            </div>
+            <div class="form-row">
+            <div class="input-wrapper">
+                <input type="text" id="benutzername2" placeholder="Benutzername" required>
+                <div class="info-icon">i</div>
+                <div class="info">Wählen Sie einen Benutzernamen.</div>
+            </div>
+            <div class="input-wrapper">
+                <input type="date" id="geb" required>
+                <div class="info-icon">i</div>
+                <div class="info">Bitte geben Sie Ihr Geburtsdatum ein.</div>
+            </div>
+        </div>
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input type="email" id="email" placeholder="E-Mail" required>
+                    <div class="info-icon">i</div>
+                    <div class="info">Geben Sie Ihre E-Mail-Adresse ein.</div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" id="emailw" placeholder="E-Mail wiederholen" required>
+                    <div class="info-icon">i</div>
+                    <div class="info">Wiederholen Sie Ihre E-Mail-Adresse.</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-wrapper">
+                    <input type="password" id="passwort2" placeholder="Passwort" required>
+                    <div class="info-icon">i</div>
+                    <div class="info">Wählen Sie ein Passwort.</div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="password" id="passwortw" placeholder="Passwort wiederholen" required>
+                    <div class="info-icon">i</div>
+                    <div class="info">Wiederholen Sie Ihr Passwort.</div>
+                </div>
+            </div>
+            <button type="button" onclick="register()">Registrieren</button>
+        </form>
+        <div class="link">
+            <a id="anmeldungg" href="#anmeldung" onclick="showAnmeldung()">Bereits einen Account? Anmelden</a>
+        </div>
+    </div>
+ 
+ 
+</body>
