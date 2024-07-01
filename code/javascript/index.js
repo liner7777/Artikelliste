@@ -326,6 +326,14 @@ function create_rolle() {
     let edit = document.getElementById("toggleEdit").checked
     let admin = document.getElementById("toggleAdmin").checked
     let name = document.getElementById("role_name").value
+    let rolle = Rollen_Gruppe.getRolleByName(name)
+    //Checkt ob die Rolle existiert / ob das Feld leer ist 
+    if (rolle || name == "") {
+        alert("Diese Rolle existiert schon / Rollenname kann nicht leer sein")
+    }
+    //Wenn nicht
+    else {
     Rollen_Gruppe.addNewRolle(name, admin, edit) // Füge die neue Rolle hinzu
-    location.reload()
+    location.reload() //Lädt Seite neu.
+    }
 }
