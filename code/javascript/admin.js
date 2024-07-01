@@ -27,7 +27,7 @@ function createRequestTable(requests) {
         actionCell.appendChild(button);
 
         var button2 = document.createElement('button');
-        button2.innerHTML = "Löschen";
+        button2.innerHTML = "L&ouml;schen";
         button2.onclick = (function (i) {
             return function () {
                 deleteRequest(requests[i].benutzername);
