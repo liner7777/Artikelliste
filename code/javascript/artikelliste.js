@@ -89,13 +89,13 @@ function createTable(list) {
 
 // Funktion zur Suche und Filterung der Artikelliste basierend auf einer Suchanfrage
 function search() {
-    var query = document.getElementById("searchBar").value.toLowerCase();  // Holt die Suchanfrage
+    var sucheneingabe = document.getElementById("searchBar").value.toLowerCase();  // Holt die Suchanfrage
     var results = [];
 
-    if (query.length > 0) {  // Überprüft, ob eine Suchanfrage vorhanden ist
+    if (sucheneingabe.length > 0) {  // Überprüft, ob eine Suchanfrage vorhanden ist
         results = sortierteListe.filter(function (item) {
-            return item.artikelnr.toString().indexOf(query) !== -1 ||  // Filtert die Artikel basierend auf der Suchanfrage
-                item.name.toLowerCase().indexOf(query) !== -1;
+            return item.artikelnr.toString().indexOf(sucheneingabe) !== -1 ||  // Filtert die Artikel basierend auf der Suchanfrage
+                item.name.toLowerCase().indexOf(sucheneingabe) !== -1;
         });
     } else {
         results = sortierteListe;  // Zeigt die gesamte sortierte Liste an, wenn keine Suchanfrage vorhanden ist
