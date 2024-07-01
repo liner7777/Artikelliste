@@ -299,18 +299,17 @@ function checkangemeldetartikelliste() {
 
 //Funktion zur Überprüfung, ob der Nutzer eingeloggt ist und Admin Rechte hat.
 function checkangemeldetundadmin() {
-    console.log("Hey")
+    if (isloggedin()) {
     let current_user = get_current_session_acc()
     let Manager = new NutzerManager(current_user)
     let NutzerRolle = Manager.getRolle()
     let Rolle = new RollenManager(NutzerRolle)
-    console.log(NutzerRolle)
-    console.log(Rolle.hasAdminRights())
-    if (!isloggedin()) { //Wenn Nutzer nicht eingeloggt ist
-        window.open("index.html", "_self") // Öffne die Startseite
+    if (Rolle.hasAdminRights() == false) {
+        window.open("index.html", "_self")
     }
-    else if (Rolle.hasAdminRights() == false) { // Wenn Nutzer keine Admin Rechte hat
-        window.open("index.html", "_self") // Öffne die Startseite
+    }
+    else {
+        window.open("index.html", "_self")
     }
 }
 
