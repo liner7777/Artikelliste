@@ -318,7 +318,14 @@ function checkangemeldetundadmin() {
 function createtestadminuser() {
     let rolle = Rollen_Gruppe.getRolleByName("Admin") // Hole die Rolle "Admin"
     var nutzer = new Nutzer("AdminVNAME", "AdminNNAME", "admin", "a@a.com", "admin", "2.7.1956", rolle, true)
+    var admincheck = Nutzer_Gruppe.getNutzerByBenutzername("admin")
+    if (admincheck) {
+        console.log("Admin Konto existiert schon")
+    }
+    else {
     Nutzer_Gruppe.addNutzer(nutzer) // Füge den Admin-Nutzer hinzu
+    location.reload()
+    }
 }
 
 // Funktion zum Erstellen einer neuen Rolle
